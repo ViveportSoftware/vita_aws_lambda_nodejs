@@ -1,0 +1,42 @@
+{
+  "Records": [
+    {
+      "cf": {
+        "config": {
+          "distributionId": "EXAMPLE"
+        },
+        "request": {
+          "uri": "/test",
+          "method": "GET",
+          "clientIp": "5.6.7.7",
+          "headers": {
+            "authorization_vita1": [
+              {
+                "key": "Authorization",
+                "value": "Basic dml0YTE6ODg4ODg="
+              }
+            ],
+            "user-agent": [
+              {
+                "key": "User-Agent",
+                "value": "Test Agent"
+              }
+            ],
+            "host": [
+              {
+                "key": "Host",
+                "value": "d123.cf.net"
+              }
+            ],
+            "cookie": [
+              {
+                "key": "Cookie",
+                "value": "SomeCookie=1; AnotherOne=A; X-Experiment-Name=B"
+              }
+            ]
+          }
+        }
+      }
+    }
+  ]
+}
