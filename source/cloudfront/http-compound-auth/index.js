@@ -24,18 +24,20 @@ exports.handler = (event, context, callback) => {
       '/api2/'
   ];
 
+  const preferRoutePrefixWhitelistMode = true;
+
   const request = event.Records[0].cf.request;
   const clientIp = request.clientIp;
   const headers = request.headers;
   const uri = request.uri;
 
-  let valid = false;
+  let valid = !preferRoutePrefixWhitelistMode;
   routePrefixes.every(routePrefix => {
       if (!uri.startsWith(routePrefix)) {
         return true; // continue
       }
 
-      valid = true;
+      valid = preferRoutePrefixWhitelistMode;
       return false; // break
   });
 
